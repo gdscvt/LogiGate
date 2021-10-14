@@ -4,3 +4,30 @@
 .smallh1{
 	font-size: 15px;
 }
+body {
+	margin: 0;
+}
+
+/* Navigation bar */
+.main-navig {
+	background: #243665;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+}
+.main-navig ul {
+	padding: 0 30px;
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	align-items : center;
+}
+.main-navig li a {
+	margin: 0;
+	padding: 10px 10px;
+	color: #fff;
+	text-decoration: none;
+	font-family: Constantia;
+	display: block;
+}
