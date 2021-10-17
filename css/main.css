@@ -9,6 +9,10 @@ body {
 }
 
 /* Navigation bar */
+.navs {
+	font-family: Constantia;
+	font-size: 18px;
+}
 .main-navig {
 	background: #243665;
 	display: flex;
@@ -28,6 +32,5 @@ body {
 	padding: 10px 10px;
 	color: #fff;
 	text-decoration: none;
-	font-family: Constantia;
 	display: block;
 }
