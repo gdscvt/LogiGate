@@ -24,6 +24,7 @@ class LoadDatabase {
                     " culpa qui officia deserunt mollit anim id est laborum.");
             log.info("Preloading " + repository.save(new Problem("Next Number", 1, problem1Content)));
             log.info("Preloading " + repository.save(new Problem("Counting Problem 1", 2)));
+            log.info("Preloading " + repository.save(new Problem("Counting Problem 2", 3)));
         };
     }
 }

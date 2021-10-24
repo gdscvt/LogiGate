@@ -25,7 +25,7 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/problems/problem-hub")
+    @GetMapping("/problems")
     public String problemHub(Model model) {
         model.addAttribute("title", "LogiGate | Problems");
         model.addAttribute("problems", repository.findAll());
