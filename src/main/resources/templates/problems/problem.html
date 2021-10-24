@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- need more metas? -->
+    <title>{{title}}</title>
+    <!-- if we move problems into a folder remember to change href -->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/problemstyle.css">
+
+</head>
+
+<body>
+
+    {{> navbar}}
+
+    <div style="height:1px; background:#fff"></div>
+    <div class="split-container">
+        <div class="split left">
+            <div id="leftTitle" class="navs splitTitle">Problem {{problem.number}}: {{problem.name}}</div>
+            <div id="p_statement" class="lWinTab">
+                <p class="writing-content">
+                    {{problem.content}}
+                    <br><br>
+                </p>
+            </div>
+            <div id="p_disc" class="lWinTab" style="display:none">
+                <div class="container">
+                    <ul class="disc-list">
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                        <li onclick="postSelect()"><span>&ltUser post title&gt</span></li>
+                    </ul>
+                </div>
+            </div>`
+            <div id="p_sol" class="lWinTab" style="display:none">
+                <p class="writing-content">This problem involves ... Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="problem-nav navs">
+                <ul>
+                    <li><a onclick="leftWinSelect(0)">Problem Statement</a></li>
+                    <li><a onclick="leftWinSelect(1)">Discussion</a></li>
+                    <li><a onclick="leftWinSelect(2)">Solution</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="split divbar"></div>
+        <div class="split right">
+            <div id="leftTitle" class="navs splitTitle">Workspace</div>
+            <div>
+                <div id="edit" contenteditable="true">
+                    Enter work here . . .
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Display a certain tab on the left side; ie the problem statement, discussion, or solution */
+        function leftWinSelect(choice) {
+            var lWinTabs = document.getElementsByClassName("lWinTab");
+            for (i = 0; i < lWinTabs.length; i++) {
+                lWinTabs[i].style.display = (i == choice ? "block" : "none");
+                console.log(i == choice);
+            }
+            /* Note: 0 = #p_statement, 1 = #p_disc, 2 = #p_sol */
+            switch (choice) {
+                case 0:
+                    document.getElementById("leftTitle").innerHTML = "Problem 1: Next Number";
+                    break;
+                case 1:
+                    document.getElementById("leftTitle").innerHTML = "Problem Discussion";
+                    break;
+                case 2:
+                    document.getElementById("leftTitle").innerHTML = "Solution";
+                    break;
+                default:
+                    leftWinSelect(0);
+            }
+        }
+        function postSelect() {
+            console.log("Post clicked");
+        }
+    </script>
+</body>
+
+</html>

@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SiteErrorController implements ErrorController {
 
     /**
-     * Serves error page with specified status code and exception message, if present
+     * Serves error page with specified status code and exception message, if
+     * present
+     * 
      * @param request
      * @param model
      * @return

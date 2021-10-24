@@ -8,7 +8,7 @@ public class LogigateApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LogigateApplication.class, args);
-		//SpringApplication.run(LogigateApplication::class.java, *args);
+		// SpringApplication.run(LogigateApplication::class.java, *args);
 	}
 
 }
