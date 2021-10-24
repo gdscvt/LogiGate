@@ -19,7 +19,10 @@
 
 
 	<div class="problem-posts">
-		<p><a href="pr-next-number">Problem 1</a></p>
+		{{#problems}}
+		<p><a href="{{slug}}">{{name}}</a></p>
+		{{/problems}}
+
 	</div>
 
 </body>

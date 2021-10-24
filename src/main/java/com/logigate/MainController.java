@@ -28,6 +28,7 @@ public class MainController {
     @GetMapping("/problems/problem-hub")
     public String problemHub(Model model) {
         model.addAttribute("title", "LogiGate | Problems");
+        model.addAttribute("problems", repository.findAll());
         return "/problems/problem-hub";
     }
 
@@ -46,11 +47,6 @@ public class MainController {
     @GetMapping("/discuss/discussion1")
     public String discussion1(Model model) {
         return "/discuss/discussion1";
-    }
-
-    @GetMapping("/problems/problem1")
-    public String problem(Model model) {
-        return "/problems/problem1";
     }
 
     @GetMapping("/problems/{slug}")
