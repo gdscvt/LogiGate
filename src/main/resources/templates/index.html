@@ -7,13 +7,13 @@
 		<!--Need more meta's not important right now -->
 		<title>{{title}}</title>
 		<link rel="stylesheet" type="text/css" href="../static/css/main.css">
-		
+		<!-- <link rel="stylesheet" type="text/css" href="css/main.css">		 -->
 
 	</head>
 
 	<body>
 		
-			{{> navbar}}
+		{{> navbar}}
 
 		<div>
 
@@ -22,14 +22,13 @@
 		</div>
 
 		<div id="banner">
-			<a id="problem-of-day" href="problems/problem.html">Problem of the Day</a>
+			<a id="problem-of-day" href="problems/{{dailyProblemSlug}}">Problem of the Day</a>
 		</div>
 
-		<div>
+		<div class="home-container">
 			<div class="home-descr">
 
-				<h3>Improve Your Problem Solving Skills</h3>
-				<ul></ul>
+				<h3>Improve Problem Solving Skills</h3>
 				<p>Practice solving problems and learn tricks</p>
 
 			</div>
@@ -37,7 +36,6 @@
 			<div class="home-descr">
 
 				<h3>Discuss With Others</h3>
-				<ul></ul>
 				<p>Chat with users about problems and ways to solve them</p>
 
 			</div>
@@ -45,7 +43,6 @@
 			<div class="home-descr">
 
 				<h3>Design Your Own Problems</h3>
-				<ul></ul>
 				<p>Curate your own problems for other users to try and solve</p>
 
 			</div>

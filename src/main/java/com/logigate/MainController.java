@@ -22,6 +22,8 @@ public class MainController {
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("title", "LogiGate | Home");
+        // TODO: randomly select the daily problem for a given day
+        model.addAttribute("dailyProblemSlug", "pr-next-number");
         return "index";
     }
 
